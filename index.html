@@ -1,130 +1,40 @@
 <!doctype html>
-<html lang="it">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Deriva – Il tempo che mente | Thomas Finco</title>
-<meta name="description" content="Deriva, techno-thriller di Thomas Finco. Uno scarto di 41 microsecondi: per tutti è rumore, per Elena Marchi è una firma.">
+<title>Deriva – A techno-thriller by Thomas Finco</title>
+<meta name="description" content="Deriva, a techno-thriller by Thomas Finco. A 41-microsecond offset: to everyone else it's noise, to Elena Marchi it's a signature.">
 <meta name="theme-color" content="#0e121b">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
 
-<!-- Anteprime sui social: dopo la pubblicazione sostituisci l'indirizzo con quello reale del sito -->
+<!-- Language versions -->
+<link rel="alternate" hreflang="it" href="https://thomasfinco.github.io/">
+<link rel="alternate" hreflang="en" href="https://thomasfinco.github.io/en/">
+<link rel="alternate" hreflang="x-default" href="https://thomasfinco.github.io/">
+
+<!-- Social previews: replace the address if you move to your own domain -->
 <meta property="og:type" content="book">
-<meta property="og:locale" content="it_IT">
-<meta property="og:title" content="Deriva – Il tempo che mente">
-<meta property="og:description" content="Techno-thriller di Thomas Finco. Uno scarto di 41 microsecondi: per tutti è rumore.">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:title" content="Deriva – A techno-thriller by Thomas Finco">
+<meta property="og:description" content="A 41-microsecond offset. To everyone else it's noise.">
 <meta property="og:image" content="https://thomasfinco.github.io/anteprima-social.jpg">
 <meta name="twitter:card" content="summary_large_image">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Book",
-  "name": "Deriva. Il tempo che mente.",
-  "author": { "@type": "Person", "name": "Thomas Finco" },
-  "inLanguage": "it",
-  "genre": "Techno-thriller",
-  "image": "https://thomasfinco.github.io/copertina.jpg"
-}
-</script>
-
-<style>
-  :root {
-    --bg: #0e121b;
-    --bg-2: #131925;
-    --linea: #263042;
-    --testo: #e9eaef;
-    --testo-2: #a9afbd;
-    --accento: #77c4d6;
-    --accento-scuro: #0e121b;
-    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
-    --mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0; background: var(--bg); color: var(--testo);
-    font: 18px/1.65 var(--serif);
-    -webkit-font-smoothing: antialiased;
-  }
-  a { color: var(--accento); }
-  .wrap { width: min(1040px, 100% - 40px); margin-inline: auto; }
-  .mono { font-family: var(--mono); }
-
-  /* Intestazione */
-  header { border-bottom: 1px solid var(--linea); }
-  header .wrap { display: flex; align-items: center; justify-content: space-between; padding-block: 16px; gap: 16px; }
-  .marchio { font-family: var(--serif); letter-spacing: .04em; color: var(--testo); text-decoration: none; font-size: 1.05rem; }
-  nav { display: flex; gap: 22px; align-items: center; font-size: .95rem; }
-  nav a { color: var(--testo-2); text-decoration: none; }
-  nav a:hover { color: var(--testo); }
-  @media (max-width: 720px) { nav .voce { display: none; } }
-
-  /* Pulsanti */
-  .btn {
-    display: inline-block; padding: 12px 22px; border-radius: 6px; text-decoration: none;
-    font: 600 .95rem var(--serif); letter-spacing: .02em; border: 1px solid var(--accento);
-    background: var(--accento); color: var(--accento-scuro); cursor: pointer;
-  }
-  .btn:hover { filter: brightness(1.08); }
-  .btn.secondario { background: transparent; color: var(--accento); }
-  .btn[aria-disabled="true"] { background: transparent; color: var(--testo-2); border-color: var(--linea); cursor: default; filter: none; }
-  .btn:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid var(--accento); outline-offset: 3px; }
-
-  /* Hero */
-  .hero { padding-block: clamp(40px, 8vw, 90px); }
-  .hero .wrap { display: grid; grid-template-columns: minmax(220px, 340px) 1fr; gap: clamp(28px, 6vw, 72px); align-items: center; }
-  .hero img { width: 100%; height: auto; display: block; border-radius: 4px; box-shadow: 0 24px 60px rgba(0,0,0,.55); }
-  .hero h1 { font-size: clamp(3rem, 9vw, 5.4rem); line-height: 1; margin: 0 0 8px; letter-spacing: .02em; font-weight: 700; }
-  .sottotitolo { font-style: italic; color: var(--accento); font-size: 1.5rem; margin: 0 0 28px; }
-  .gancio { font-size: 1.25rem; max-width: 30ch; margin: 0 0 28px; }
-  .azioni { display: flex; flex-wrap: wrap; gap: 12px; }
-  .autore-riga { margin-top: 28px; color: var(--testo-2); font-size: 1rem; }
-  @media (max-width: 720px) { .hero .wrap { grid-template-columns: 1fr; } .hero img { max-width: 280px; margin-inline: auto; } }
-
-  /* Onda */
-  .onda { border-block: 1px solid var(--linea); background: var(--bg-2); padding-block: 26px 18px; }
-  .onda canvas { width: 100%; height: 90px; display: block; }
-  .offset { text-align: center; color: var(--accento); font-family: var(--mono); font-size: .95rem; margin: 6px 0 0; }
-
-  /* Sezioni */
-  section { padding-block: clamp(44px, 7vw, 84px); }
-  section + section { border-top: 1px solid var(--linea); }
-  h2 { font-size: clamp(1.7rem, 4vw, 2.3rem); margin: 0 0 24px; font-weight: 700; }
-  .etichetta { font-family: var(--mono); font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accento); margin: 0 0 10px; }
-  .colonna { max-width: 38em; }
-  .colonna p { margin: 0 0 1.2em; }
-  .evidenza { font-size: 1.35rem; font-style: italic; }
-
-  .schede { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 8px; }
-  .scheda { border: 1px solid var(--linea); background: var(--bg-2); border-radius: 8px; padding: 22px; }
-  .scheda h3 { margin: 0 0 10px; font-size: 1.15rem; }
-  .scheda p { margin: 0; color: var(--testo-2); font-size: 1rem; line-height: 1.6; }
-  .nota { margin-top: 22px; color: var(--testo-2); font-size: .95rem; }
-
-  /* Newsletter */
-  form { display: flex; flex-wrap: wrap; gap: 12px; max-width: 520px; }
-  input[type=email] {
-    flex: 1 1 240px; padding: 12px 14px; border-radius: 6px; border: 1px solid var(--linea);
-    background: var(--bg-2); color: var(--testo); font: 1rem var(--serif);
-  }
-
-  footer { border-top: 1px solid var(--linea); padding-block: 32px; color: var(--testo-2); font-size: .9rem; }
-  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
-  [hidden] { display: none !important; }
-</style>
 </head>
 <body>
 
 <header>
   <div class="wrap">
     <a class="marchio" href="#top">Thomas Finco</a>
-    <nav aria-label="Principale">
-      <a class="voce" href="#il-libro">Il libro</a>
-      <a class="voce" href="#il-tempo">Il tempo che mente</a>
-      <a class="voce" href="#estratto" id="nav-estratto" hidden>Estratto</a>
-      <a class="voce" href="#autore">L'autore</a>
-      <a class="btn" id="btn-acquista-alto" aria-disabled="true">Presto su Amazon</a>
+    <nav aria-label="Main">
+      <a class="voce" href="#the-book">The book</a>
+      <a class="voce" href="#the-real-part">The real part</a>
+      <a class="voce" href="#estratto" id="nav-estratto" hidden>Excerpt</a>
+      <a class="voce" href="#author">The author</a>
+      <a class="lingua" href="../" hreflang="it" lang="it" title="Leggi il sito in italiano">IT</a>
+      <a class="btn" id="btn-acquista-alto" aria-disabled="true">Coming soon on Amazon</a>
     </nav>
   </div>
 </header>
@@ -133,16 +43,16 @@
 
   <div class="hero">
     <div class="wrap">
-      <img src="copertina.jpg" width="800" height="1237" alt="Copertina di Deriva. Il tempo che mente., romanzo di Thomas Finco: titolo chiaro su sfondo scuro e una linea piatta che comincia a vibrare.">
+      <img src="../copertina.jpg" width="800" height="1237" alt="Cover of the Italian edition of Deriva by Thomas Finco: a bold title on a dark background and a flat line that starts to tremble.">
       <div>
         <h1>DERIVA</h1>
-        <p class="sottotitolo">Il tempo che mente.</p>
-        <p class="gancio">Uno scarto di 41 microsecondi. Per tutti è rumore. Per Elena Marchi è una firma.</p>
+        <p class="sottotitolo">A techno-thriller.</p>
+        <p class="gancio">A 41-microsecond offset. To everyone else, it's noise. To Elena Marchi, it's a signature.</p>
         <div class="azioni">
-          <a class="btn" id="btn-ebook" aria-disabled="true">Ebook: in arrivo su Amazon</a>
-          <a class="btn secondario" id="btn-cartaceo" aria-disabled="true">Cartaceo: novembre 2026</a>
+          <a class="btn" id="btn-ebook" aria-disabled="true">English ebook: coming soon</a>
+          <a class="btn secondario" id="btn-cartaceo" aria-disabled="true">English paperback: coming soon</a>
         </div>
-        <p class="autore-riga">Techno-thriller di <strong>Thomas Finco</strong></p>
+        <p class="autore-riga">A novel by <strong>Thomas Finco</strong></p>
       </div>
     </div>
   </div>
@@ -154,66 +64,66 @@
     </div>
   </div>
 
-  <section id="il-libro">
+  <section id="the-book">
     <div class="wrap colonna">
-      <p class="etichetta">Il libro</p>
-      <h2>Non è un blackout. Non si vede.</h2>
-      <p class="evidenza">A Trieste, Elena Marchi gestisce un cluster di server di tempo agganciati a orologi atomici: un lavoro invisibile da cui dipendono borse, reti elettriche e banche.</p>
-      <p>Quando si accorge che qualcosa, in rete, sta spostando le lancette, nessuno la prende sul serio. Quattro anni prima ha avuto ragione troppo presto, e l'ha pagata cara.</p>
-      <p>Non è un attacco che si vede. È una deriva lenta che rende inaffidabili i timestamp, e senza timestamp non si può più dire cosa è successo prima di cosa.</p>
-      <p>Da Trieste a Londra, fino alle porte di Parigi, Elena dovrà decidere di chi fidarsi, a cominciare da sé stessa.</p>
-      <p><em>Deriva. Il tempo che mente.</em></p>
+      <p class="etichetta">The book</p>
+      <h2>It's not a blackout. You can't see it.</h2>
+      <p class="evidenza">In Trieste, Elena Marchi runs a cluster of time servers locked to atomic clocks: invisible work that stock exchanges, power grids and banks depend on.</p>
+      <p>When she notices that something on the network is moving the hands of the clock, nobody takes her seriously. Four years ago she was right too early, and it cost her dearly.</p>
+      <p>It isn't an attack anyone can see. It's a slow drift that makes timestamps unreliable, and without timestamps you can no longer say what happened before what.</p>
+      <p>From Trieste to London, to the gates of Paris, Elena will have to decide whom to trust, starting with herself.</p>
+      <p class="nota"><em>Deriva</em> is the novel's original Italian title. The English edition, and its title, are in the works.</p>
     </div>
   </section>
 
-  <section id="il-tempo">
+  <section id="the-real-part">
     <div class="wrap">
-      <p class="etichetta">La parte vera</p>
-      <h2>Il tempo che mente</h2>
+      <p class="etichetta">The real part</p>
+      <h2>Time that lies</h2>
       <div class="schede">
         <article class="scheda">
-          <h3>Che ora è davvero?</h3>
-          <p>Borse, banche e reti elettriche si affidano a server di tempo agganciati a orologi atomici e al segnale GPS. Se l'ora si sposta di pochi microsecondi, di solito nessuno se ne accorge.</p>
+          <h3>What time is it, really?</h3>
+          <p>Stock exchanges, banks and power grids rely on time servers locked to atomic clocks and to the GPS signal. If the time slips by a few microseconds, usually nobody notices.</p>
         </article>
         <article class="scheda">
-          <h3>Chi decide l'ora esatta</h3>
-          <p>A Sèvres, vicino a Parigi, il BIPM calcola il tempo universale (UTC) a posteriori, combinando gli orologi atomici dei laboratori nazionali.</p>
+          <h3>Who decides the exact time</h3>
+          <p>In Sèvres, near Paris, the BIPM computes Coordinated Universal Time (UTC) after the fact, by combining the atomic clocks of national laboratories.</p>
         </article>
         <article class="scheda">
-          <h3>Quando i timestamp mentono</h3>
-          <p>Se non ti fidi più dei timestamp, non puoi stabilire cosa è successo prima di cosa: transazioni che si sdoppiano, registri inutilizzabili, prove che non reggono.</p>
+          <h3>When timestamps lie</h3>
+          <p>If you can't trust timestamps anymore, you can't tell what happened before what: transactions that duplicate, records that are useless, evidence that doesn't hold up.</p>
         </article>
       </div>
-      <p class="nota">Nessuna anticipazione sulla trama: queste sono le cose vere da cui parte il romanzo.</p>
+      <p class="nota">No plot spoilers: these are the real things the novel starts from.</p>
     </div>
   </section>
 
   <section id="estratto" hidden>
     <div class="wrap colonna">
-      <p class="etichetta">Estratto</p>
-      <h2>Le prime pagine</h2>
+      <p class="etichetta">Excerpt</p>
+      <h2>The first pages</h2>
       <div id="testo-estratto"></div>
     </div>
   </section>
 
-  <section id="autore">
+  <section id="author">
     <div class="wrap colonna">
-      <p class="etichetta">L'autore</p>
+      <p class="etichetta">The author</p>
       <h2>Thomas Finco</h2>
-      <p>Thomas Finco scrive romanzi che partono da una cosa vera e la portano un passo oltre. In <em>Deriva</em> quella cosa è il tempo: l'infrastruttura invisibile su cui poggiano la finanza, l'energia e le comunicazioni, e che di solito si nota solo quando si rompe.</p>
-      <p>Preferisce capitoli brevi, tensione costante e spiegazioni che non rallentano la storia.</p>
+      <p>Thomas Finco writes novels that start from something real and take it one step further. In <em>Deriva</em> that something is time: the invisible infrastructure that finance, energy and communications rest on, and that we usually notice only when it breaks.</p>
+      <p>He likes short chapters, constant tension and explanations that never slow the story down.</p>
     </div>
   </section>
 
   <section id="newsletter" hidden>
     <div class="wrap colonna">
       <p class="etichetta">Newsletter</p>
-      <h2>Restiamo in contatto</h2>
-      <p>Ricevi l'estratto esteso e i retroscena di <em>Deriva</em>. Una mail ogni tanto, niente spam.</p>
+      <h2>Stay in touch</h2>
+      <p>Get the extended excerpt and the behind-the-scenes notes on <em>Deriva</em>. An occasional email, no spam.</p>
       <form id="form-newsletter" method="post">
-        <label for="email" class="sr" style="position:absolute;left:-9999px">Indirizzo email</label>
-        <input id="email" name="email" type="email" required placeholder="La tua email" autocomplete="email">
-        <button class="btn" type="submit">Iscrivimi</button>
+        <label for="email" class="sr">Email address</label>
+        <input id="email" name="email" type="email" required placeholder="Your email" autocomplete="email">
+        <button class="btn" type="submit">Subscribe</button>
       </form>
     </div>
   </section>
@@ -224,90 +134,11 @@
   <div class="wrap">
     <span>© 2026 Thomas Finco</span>
     <span id="contatto" hidden></span>
-    <span>Questo sito non usa cookie né strumenti di tracciamento.</span>
+    <span>This site uses no cookies or tracking tools.</span>
   </div>
 </footer>
 
-<script>
-/* ============================================================
-   CONFIGURAZIONE: è l'unica parte da modificare dopo la pubblicazione.
-   Lascia le virgolette vuote ("") per tenere nascosto o disattivato un elemento.
-   ============================================================ */
-const CONFIG = {
-  linkEbook:    "",   // indirizzo Amazon.it dell'ebook, quando è online
-  linkCartaceo: "",   // indirizzo Amazon.it del cartaceo, a novembre
-  newsletterAction: "", // indirizzo del modulo (MailerLite o Brevo); vuoto = sezione nascosta
-  email: "",          // email dedicata all'autore; vuoto = non mostrata
-  estratto: []        // paragrafi dell'estratto, uno per voce; vuoto = sezione nascosta
-};
-/* ============================================================ */
-
-(function () {
-  const $ = id => document.getElementById(id);
-
-  // Pulsanti di acquisto
-  function attiva(el, link, testo) {
-    if (!link) return;
-    el.href = link; el.removeAttribute("aria-disabled");
-    el.target = "_blank"; el.rel = "noopener";
-    el.textContent = testo;
-  }
-  attiva($("btn-ebook"), CONFIG.linkEbook, "Acquista l'ebook su Amazon");
-  attiva($("btn-cartaceo"), CONFIG.linkCartaceo, "Acquista il cartaceo su Amazon");
-  const principale = CONFIG.linkEbook || CONFIG.linkCartaceo;
-  attiva($("btn-acquista-alto"), principale, "Acquista su Amazon");
-  if (CONFIG.linkEbook && !CONFIG.linkCartaceo) $("btn-cartaceo").textContent = "Cartaceo: novembre 2026";
-  document.querySelectorAll('a[aria-disabled="true"]').forEach(a => a.addEventListener("click", e => e.preventDefault()));
-
-  // Estratto
-  if (CONFIG.estratto.length) {
-    const box = $("testo-estratto");
-    CONFIG.estratto.forEach(t => { const p = document.createElement("p"); p.textContent = t; box.appendChild(p); });
-    $("estratto").hidden = false; $("nav-estratto").hidden = false;
-  }
-  // Newsletter
-  if (CONFIG.newsletterAction) {
-    $("form-newsletter").action = CONFIG.newsletterAction;
-    $("newsletter").hidden = false;
-  }
-  // Contatto
-  if (CONFIG.email) {
-    const c = $("contatto"); c.hidden = false;
-    const a = document.createElement("a"); a.href = "mailto:" + CONFIG.email; a.textContent = CONFIG.email; c.appendChild(a);
-  }
-
-  // Onda: linea piatta che comincia a vibrare, come sulla copertina
-  const canvas = $("onda"), ctx = canvas.getContext("2d");
-  const etichetta = $("offset");
-  const ridotto = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  let w = 0, h = 0, t0 = performance.now();
-  function misura() {
-    const r = canvas.getBoundingClientRect(), d = window.devicePixelRatio || 1;
-    w = r.width; h = r.height; canvas.width = w * d; canvas.height = h * d; ctx.setTransform(d, 0, 0, d, 0, 0);
-  }
-  function rumore(x, t) {
-    return Math.sin(x * .09 + t * 3.1) * .5 + Math.sin(x * .23 - t * 5.3) * .3 + Math.sin(x * .61 + t * 8.7) * .2;
-  }
-  function disegna(ora) {
-    const t = (ora - t0) / 1000, metà = w / 2, y0 = h / 2;
-    ctx.clearRect(0, 0, w, h);
-    ctx.lineWidth = 2; ctx.lineJoin = "round";
-    ctx.strokeStyle = "#a9afbd"; ctx.beginPath(); ctx.moveTo(0, y0); ctx.lineTo(metà, y0); ctx.stroke();
-    ctx.strokeStyle = "#77c4d6"; ctx.beginPath(); ctx.moveTo(metà, y0);
-    for (let x = metà; x <= w; x += 2) {
-      const q = (x - metà) / (w - metà);
-      ctx.lineTo(x, y0 + rumore(x, ridotto ? 0 : t) * q * q * (h * .42));
-    }
-    ctx.stroke();
-    // Contatore: sale fino a 41 microsecondi, poi oscilla di un'unità
-    let us = 41;
-    if (!ridotto) us = t < 4 ? Math.round(41 * (t / 4)) : 41 + (Math.floor(t * 6) % 3 === 0 ? 1 : 0);
-    etichetta.textContent = "offset: +0.0000" + String(us).padStart(2, "0") + "s";
-    if (!ridotto) requestAnimationFrame(disegna);
-  }
-  misura(); addEventListener("resize", () => { misura(); if (ridotto) disegna(performance.now()); });
-  requestAnimationFrame(disegna);
-})();
-</script>
+<script src="../config.js"></script>
+<script src="../app.js"></script>
 </body>
 </html>
