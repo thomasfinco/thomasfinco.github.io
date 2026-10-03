@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deriva – A techno-thriller by Thomas Finco</title>
+<meta name="description" content="Deriva, a techno-thriller by Thomas Finco. A 41-microsecond offset: to everyone else it's noise, to Elena Marchi it's a signature.">
+<meta name="theme-color" content="#0e121b">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+
+<!-- Language versions -->
+<link rel="alternate" hreflang="it" href="https://thomasfinco.github.io/">
+<link rel="alternate" hreflang="en" href="https://thomasfinco.github.io/en/">
+<link rel="alternate" hreflang="x-default" href="https://thomasfinco.github.io/">
+
+<!-- Social previews: replace the address if you move to your own domain -->
+<meta property="og:type" content="book">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:title" content="Deriva – A techno-thriller by Thomas Finco">
+<meta property="og:description" content="A 41-microsecond offset. To everyone else it's noise.">
+<meta property="og:image" content="https://thomasfinco.github.io/anteprima-social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="marchio" href="#top">Thomas Finco</a>
+    <nav aria-label="Main">
+      <a class="voce" href="#the-book">The book</a>
+      <a class="voce" href="#the-real-part">The real part</a>
+      <a class="voce" href="#estratto" id="nav-estratto" hidden>Excerpt</a>
+      <a class="voce" href="#author">The author</a>
+      <a class="lingua" href="../" hreflang="it" lang="it" title="Leggi il sito in italiano">IT</a>
+      <a class="btn" id="btn-acquista-alto" aria-disabled="true">Coming soon on Amazon</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="hero">
+    <div class="wrap">
+      <img src="../copertina.jpg" width="800" height="1237" alt="Cover of the Italian edition of Deriva by Thomas Finco: a bold title on a dark background and a flat line that starts to tremble.">
+      <div>
+        <h1>DERIVA</h1>
+        <p class="sottotitolo">A techno-thriller.</p>
+        <p class="gancio">A 41-microsecond offset. To everyone else, it's noise. To Elena Marchi, it's a signature.</p>
+        <div class="azioni">
+          <a class="btn" id="btn-ebook" aria-disabled="true">English ebook: coming soon</a>
+          <a class="btn secondario" id="btn-cartaceo" aria-disabled="true">English paperback: coming soon</a>
+        </div>
+        <p class="autore-riga">A novel by <strong>Thomas Finco</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="onda" aria-hidden="true">
+    <div class="wrap">
+      <canvas id="onda"></canvas>
+      <p class="offset" id="offset">offset: +0.000041s</p>
+    </div>
+  </div>
+
+  <section id="the-book">
+    <div class="wrap colonna">
+      <p class="etichetta">The book</p>
+      <h2>It's not a blackout. You can't see it.</h2>
+      <p class="evidenza">In Trieste, Elena Marchi runs a cluster of time servers locked to atomic clocks: invisible work that stock exchanges, power grids and banks depend on.</p>
+      <p>When she notices that something on the network is moving the hands of the clock, nobody takes her seriously. Four years ago she was right too early, and it cost her dearly.</p>
+      <p>It isn't an attack anyone can see. It's a slow drift that makes timestamps unreliable, and without timestamps you can no longer say what happened before what.</p>
+      <p>From Trieste to London, to the gates of Paris, Elena will have to decide whom to trust, starting with herself.</p>
+      <p class="nota"><em>Deriva</em> is the novel's original Italian title. The English edition, and its title, are in the works.</p>
+    </div>
+  </section>
+
+  <section id="the-real-part">
+    <div class="wrap">
+      <p class="etichetta">The real part</p>
+      <h2>Time that lies</h2>
+      <div class="schede">
+        <article class="scheda">
+          <h3>What time is it, really?</h3>
+          <p>Stock exchanges, banks and power grids rely on time servers locked to atomic clocks and to the GPS signal. If the time slips by a few microseconds, usually nobody notices.</p>
+        </article>
+        <article class="scheda">
+          <h3>Who decides the exact time</h3>
+          <p>In Sèvres, near Paris, the BIPM computes Coordinated Universal Time (UTC) after the fact, by combining the atomic clocks of national laboratories.</p>
+        </article>
+        <article class="scheda">
+          <h3>When timestamps lie</h3>
+          <p>If you can't trust timestamps anymore, you can't tell what happened before what: transactions that duplicate, records that are useless, evidence that doesn't hold up.</p>
+        </article>
+      </div>
+      <p class="nota">No plot spoilers: these are the real things the novel starts from.</p>
+    </div>
+  </section>
+
+  <section id="estratto" hidden>
+    <div class="wrap colonna">
+      <p class="etichetta">Excerpt</p>
+      <h2>The first pages</h2>
+      <div id="testo-estratto"></div>
+    </div>
+  </section>
+
+  <section id="author">
+    <div class="wrap colonna">
+      <p class="etichetta">The author</p>
+      <h2>Thomas Finco</h2>
+      <p>Thomas Finco writes novels that start from something real and take it one step further. In <em>Deriva</em> that something is time: the invisible infrastructure that finance, energy and communications rest on, and that we usually notice only when it breaks.</p>
+      <p>He likes short chapters, constant tension and explanations that never slow the story down.</p>
+    </div>
+  </section>
+
+  <section id="newsletter" hidden>
+    <div class="wrap colonna">
+      <p class="etichetta">Newsletter</p>
+      <h2>Stay in touch</h2>
+      <p>Get the extended excerpt and the behind-the-scenes notes on <em>Deriva</em>. An occasional email, no spam.</p>
+      <form id="form-newsletter" method="post">
+        <label for="email" class="sr">Email address</label>
+        <input id="email" name="email" type="email" required placeholder="Your email" autocomplete="email">
+        <button class="btn" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Thomas Finco</span>
+    <span id="contatto" hidden></span>
+    <span>This site uses no cookies or tracking tools.</span>
+  </div>
+</footer>
+
+<script src="../config.js"></script>
+<script src="../app.js"></script>
+</body>
+</html>
