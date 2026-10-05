@@ -132,10 +132,14 @@
       <p class="etichetta">Newsletter</p>
       <h2>Restiamo in contatto</h2>
       <p>Ricevi l'estratto esteso e i retroscena di <em>Deriva</em>. Una mail ogni tanto, niente spam.</p>
-      <form id="form-newsletter" method="post">
+      <form id="form-newsletter" method="post" novalidate>
         <label for="email" class="sr">Indirizzo email</label>
-        <input id="email" name="email" type="email" required placeholder="La tua email" autocomplete="email">
+        <input id="email" name="fields[email]" type="email" required placeholder="La tua email" autocomplete="email">
         <button class="btn" type="submit">Iscrivimi</button>
+        <label class="consenso"><input type="checkbox" id="consenso" required> <span>Accetto di ricevere la newsletter di Thomas Finco e ho letto l'<a href="privacy.html">informativa sulla privacy</a>.</span></label>
+        <input type="hidden" name="ml-submit" value="1">
+        <input type="hidden" name="anticsrf" value="true">
+        <p id="esito" role="status" aria-live="polite"></p>
       </form>
     </div>
   </section>

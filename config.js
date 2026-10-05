@@ -11,7 +11,7 @@ const CONFIG = {
   it: {
     linkEbook: "",          // indirizzo Amazon.it dell'ebook, quando è online
     linkCartaceo: "",       // indirizzo Amazon.it del cartaceo, a novembre
-    newsletterAction: "",   // indirizzo del modulo (MailerLite o Brevo): vuoto = sezione nascosta
+    newsletterAction: "https://assets.mailerlite.com/jsonp/2685372/forms/200472986106463259/subscribe",   // modulo MailerLite "Newsletter IT"
     estratto: []            // paragrafi dell'estratto, uno per voce: vuoto = sezione nascosta
   },
 
@@ -19,7 +19,7 @@ const CONFIG = {
   en: {
     linkEbook: "",          // Amazon.com ebook address, once published
     linkCartaceo: "",       // Amazon.com paperback address, once published
-    newsletterAction: "",   // form address (MailerLite or Brevo): empty = section hidden
+    newsletterAction: "https://assets.mailerlite.com/jsonp/2685372/forms/200473248200132278/subscribe",   // MailerLite form "Newsletter EN"
     estratto: []            // excerpt paragraphs, one per entry: empty = section hidden
   }
 };

@@ -28,9 +28,24 @@
     cfg.estratto.forEach(t => { const p = document.createElement("p"); p.textContent = t; box.appendChild(p); });
     $("estratto").hidden = false; $("nav-estratto").hidden = false;
   }
-  // Newsletter
+  // Newsletter (MailerLite): invio in background, senza lasciare il sito
   if (cfg.newsletterAction) {
-    $("form-newsletter").action = cfg.newsletterAction;
+    const f = $("form-newsletter"), esito = $("esito");
+    const msg = {
+      it: { ok: "Grazie! Ti abbiamo mandato un'email: conferma l'iscrizione per completarla.", err: "Qualcosa non ha funzionato. Riprova tra poco.", mail: "Inserisci un indirizzo email valido.", cons: "Per iscriverti serve spuntare il consenso." },
+      en: { ok: "Thank you! We've sent you an email: confirm your subscription to complete it.", err: "Something went wrong. Please try again shortly.", mail: "Please enter a valid email address.", cons: "Please tick the consent box to subscribe." }
+    }[lingua];
+    f.action = cfg.newsletterAction;
+    f.addEventListener("submit", e => {
+      e.preventDefault();
+      if (!f.email.validity.valid || !f.email.value) { esito.textContent = msg.mail; return; }
+      if (!$("consenso").checked) { esito.textContent = msg.cons; return; }
+      const dati = new FormData(f); dati.delete("");
+      esito.textContent = "…";
+      fetch(cfg.newsletterAction, { method: "POST", mode: "no-cors", body: dati })
+        .then(() => { esito.textContent = msg.ok; f.reset(); })
+        .catch(() => { esito.textContent = msg.err; });
+    });
     $("newsletter").hidden = false;
   }
   // Contatto

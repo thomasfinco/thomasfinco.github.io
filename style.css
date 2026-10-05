@@ -85,3 +85,10 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 .lingua { border: 1px solid var(--linea); border-radius: 4px; padding: 3px 8px; font-family: var(--mono); font-size: .8rem; letter-spacing: .08em; }
 .lingua:hover { border-color: var(--accento); color: var(--accento); }
 .sr { position: absolute; left: -9999px; }
+
+/* Newsletter: consenso e messaggio di esito */
+#form-newsletter{flex-wrap:wrap}
+#form-newsletter .consenso{flex-basis:100%;display:flex;gap:.6rem;align-items:flex-start;font-size:.9rem;color:#a9afbd;margin-top:.8rem}
+#form-newsletter .consenso input{margin-top:.25rem;flex:none}
+#form-newsletter .consenso a{color:#77c4d6}
+#esito{flex-basis:100%;margin:.8rem 0 0;color:#77c4d6;min-height:1.4em}
