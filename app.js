@@ -12,7 +12,7 @@
 
   // Pulsanti di acquisto: restano disattivati finché il link in config.js è vuoto
   function attiva(el, link, testo) {
-    if (!link) return;
+    if (!el || !link) return;
     el.href = link; el.removeAttribute("aria-disabled");
     el.target = "_blank"; el.rel = "noopener";
     el.textContent = testo;
@@ -20,16 +20,19 @@
   attiva($("btn-ebook"), cfg.linkEbook, testi.ebook);
   attiva($("btn-cartaceo"), cfg.linkCartaceo, testi.cartaceo);
   attiva($("btn-acquista-alto"), cfg.linkEbook || cfg.linkCartaceo, testi.alto);
+  // Pagina "Grazie": il pulsante della recensione compare solo se c'è il link in config.js
+  const rec = $("btn-recensione");
+  if (rec && cfg.linkRecensione) { rec.href = cfg.linkRecensione; rec.target = "_blank"; rec.rel = "noopener"; rec.hidden = false; }
   document.querySelectorAll('a[aria-disabled="true"]').forEach(a => a.addEventListener("click", e => e.preventDefault()));
 
   // Estratto
-  if (cfg.estratto.length) {
+  if (cfg.estratto.length && $("estratto")) {
     const box = $("testo-estratto");
     cfg.estratto.forEach(t => { const p = document.createElement("p"); p.textContent = t; box.appendChild(p); });
     $("estratto").hidden = false; $("nav-estratto").hidden = false;
   }
   // Newsletter (MailerLite): invio in background, senza lasciare il sito
-  if (cfg.newsletterAction) {
+  if (cfg.newsletterAction && $("form-newsletter")) {
     const f = $("form-newsletter"), esito = $("esito");
     const msg = {
       it: { ok: "Grazie! Ti abbiamo mandato un'email: conferma l'iscrizione per completarla.", err: "Qualcosa non ha funzionato. Riprova tra poco.", mail: "Inserisci un indirizzo email valido.", cons: "Per iscriverti serve spuntare il consenso." },
@@ -50,12 +53,13 @@
   }
   // Contatto
   if (CONFIG.email) {
-    const c = $("contatto"); c.hidden = false;
-    const a = document.createElement("a"); a.href = "mailto:" + CONFIG.email; a.textContent = CONFIG.email; c.appendChild(a);
+    const c = $("contatto"); if (c) { c.hidden = false;
+    const a = document.createElement("a"); a.href = "mailto:" + CONFIG.email; a.textContent = CONFIG.email; c.appendChild(a); }
   }
 
   // Onda: linea piatta che comincia a vibrare, come sulla copertina
-  const canvas = $("onda"), ctx = canvas.getContext("2d");
+  const canvas = $("onda"); if (!canvas) return;
+  const ctx = canvas.getContext("2d");
   const etichetta = $("offset");
   const ridotto = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   let w = 0, h = 0, t0 = performance.now();

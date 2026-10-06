@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grazie per aver letto Deriva | Thomas Finco</title>
+<meta name="description" content="Hai finito Deriva: grazie. Iscriviti alla newsletter di Thomas Finco per i retroscena veri del romanzo e le notizie sul prossimo libro.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0e121b">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<link rel="alternate" hreflang="it" href="https://thomasfinco.github.io/grazie/">
+<link rel="alternate" hreflang="en" href="https://thomasfinco.github.io/en/thanks/">
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="marchio" href="../">Thomas Finco</a>
+    <nav aria-label="Principale">
+      <a class="voce" href="../">Il sito</a>
+      <a class="lingua" href="../en/thanks/" hreflang="en" lang="en" title="Read this page in English">EN</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="grazie">
+    <div class="wrap colonna">
+      <p class="etichetta">Ultima pagina</p>
+      <h1>Grazie per aver letto.</h1>
+      <p class="evidenza">Se sei qui, hai appena chiuso <em>Deriva</em>.</p>
+      <p>Hai passato qualche ora con Elena e con un numero che non doveva esistere. Per chi scrive non c'è regalo più grande del tempo di chi legge, e in questa storia il tempo conta parecchio.</p>
+    </div>
+  </div>
+
+  <div class="onda" aria-hidden="true">
+    <div class="wrap">
+      <canvas id="onda"></canvas>
+      <p class="offset" id="offset">offset: +0.000041s</p>
+    </div>
+  </div>
+
+  <section id="newsletter" hidden>
+    <div class="wrap colonna">
+      <p class="etichetta">Newsletter</p>
+      <h2>Restiamo in contatto</h2>
+      <p>Ogni tanto scrivo una mail a chi ha letto il libro. Dentro ci trovi:</p>
+      <ul class="elenco">
+        <li>la parte vera dietro il romanzo: orologi atomici, GPS, chi decide l'ora esatta;</li>
+        <li>i retroscena di <em>Deriva</em>, senza il rischio di anticipazioni;</li>
+        <li>le notizie sul prossimo libro, prima che esca.</li>
+      </ul>
+      <p>Niente spam. Ti cancelli con un clic quando vuoi.</p>
+      <form id="form-newsletter" method="post" novalidate>
+        <label for="email" class="sr">Indirizzo email</label>
+        <input id="email" name="fields[email]" type="email" required placeholder="La tua email" autocomplete="email">
+        <button class="btn" type="submit">Iscrivimi</button>
+        <label class="consenso"><input type="checkbox" id="consenso" required> <span>Accetto di ricevere la newsletter di Thomas Finco e ho letto l'<a href="../privacy.html">informativa sulla privacy</a>.</span></label>
+        <input type="hidden" name="ml-submit" value="1">
+        <input type="hidden" name="anticsrf" value="true">
+        <p id="esito" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <section id="recensione">
+    <div class="wrap colonna">
+      <p class="etichetta">Un favore</p>
+      <h2>Due righe su Amazon</h2>
+      <p>Per un autore indipendente le recensioni contano più di qualsiasi pubblicità. Se il libro ti è piaciuto, bastano due righe sincere: aiutano altri lettori a trovarlo.</p>
+      <p><a class="btn secondario" id="btn-recensione" hidden>Scrivi una recensione su Amazon</a></p>
+    </div>
+  </section>
+
+  <section id="ancora">
+    <div class="wrap colonna">
+      <p class="etichetta">E adesso</p>
+      <h2>Vuoi sapere cosa c'è di vero?</h2>
+      <p>Sul sito trovi, in breve, ciò che nel romanzo è reale: i server di tempo, il BIPM di Sèvres, cosa succede quando i timestamp mentono.</p>
+      <p><a class="btn secondario" href="../#il-tempo">La parte vera</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Thomas Finco</span>
+    <span id="contatto" hidden></span>
+    <span>Questo sito non usa cookie né strumenti di tracciamento.</span>
+  </div>
+</footer>
+
+<script src="../config.js"></script>
+<script src="../app.js"></script>
+</body>
+</html>
