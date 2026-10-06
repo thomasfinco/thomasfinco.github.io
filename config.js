@@ -5,7 +5,7 @@
    ============================================================ */
 const CONFIG = {
   // Email dedicata all'autore (compare nel piè di pagina di entrambe le pagine)
-  email: "",
+  email: "thomasfinco@protonmail.com",
 
   // Pagina italiana
   it: {
