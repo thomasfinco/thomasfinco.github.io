@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="style.css">
 
 <!-- Versioni linguistiche -->
+<link rel="canonical" href="https://thomasfinco.github.io/">
 <link rel="alternate" hreflang="it" href="https://thomasfinco.github.io/">
 <link rel="alternate" hreflang="en" href="https://thomasfinco.github.io/en/">
 <link rel="alternate" hreflang="x-default" href="https://thomasfinco.github.io/">
@@ -27,11 +28,41 @@
 {
   "@context": "https://schema.org",
   "@type": "Book",
+  "@id": "https://thomasfinco.github.io/#libro",
   "name": "Deriva. Il tempo che mente.",
-  "author": { "@type": "Person", "name": "Thomas Finco" },
+  "url": "https://thomasfinco.github.io/",
+  "author": {
+    "@type": "Person",
+    "@id": "https://thomasfinco.github.io/#autore",
+    "name": "Thomas Finco",
+    "url": "https://thomasfinco.github.io/"
+  },
   "inLanguage": "it",
   "genre": "Techno-thriller",
-  "image": "https://thomasfinco.github.io/copertina.jpg"
+  "image": "https://thomasfinco.github.io/copertina.jpg",
+  "workTranslation": {
+    "@id": "https://thomasfinco.github.io/en/#book"
+  },
+  "workExample": {
+    "@type": "Book",
+    "bookFormat": "https://schema.org/EBook",
+    "inLanguage": "it",
+    "datePublished": "2026-10-10",
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "ASIN",
+      "value": "B0HM3VLLCF"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "3.99",
+      "priceCurrency": "EUR",
+      "url": "https://www.amazon.it/dp/B0HM3VLLCF"
+    }
+  },
+  "sameAs": [
+    "https://www.amazon.it/dp/B0HM3VLLCF"
+  ]
 }
 </script>
 </head>
