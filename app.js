@@ -6,8 +6,8 @@
   const cfg = CONFIG[lingua];
 
   const testi = {
-    it: { ebook: "Acquista l'ebook su Amazon", cartaceo: "Acquista il cartaceo su Amazon", alto: "Acquista su Amazon", preEbook: "Preordina l'ebook su Amazon", preAlto: "Preordina su Amazon" },
-    en: { ebook: "Buy the ebook on Amazon", cartaceo: "Buy the paperback on Amazon", alto: "Buy on Amazon", preEbook: "Pre-order the ebook on Amazon", preAlto: "Pre-order on Amazon" }
+    it: { ebook: "Acquista l'ebook su Amazon", cartaceo: "Acquista il cartaceo su Amazon", rigida: "Acquista la copertina rigida su Amazon", alto: "Acquista su Amazon", preEbook: "Preordina l'ebook su Amazon", preAlto: "Preordina su Amazon" },
+    en: { ebook: "Buy the ebook on Amazon", cartaceo: "Buy the paperback on Amazon", rigida: "Buy the hardcover on Amazon", alto: "Buy on Amazon", preEbook: "Pre-order the ebook on Amazon", preAlto: "Pre-order on Amazon" }
   }[lingua];
   // Preordine: fino al giorno di uscita indicato in config.js il pulsante dice "Preordina"
   const oggi = new Date(), iso = oggi.getFullYear() + "-" + String(oggi.getMonth() + 1).padStart(2, "0") + "-" + String(oggi.getDate()).padStart(2, "0");
@@ -22,6 +22,9 @@
   }
   attiva($("btn-ebook"), cfg.linkEbook, preordine ? testi.preEbook : testi.ebook);
   attiva($("btn-cartaceo"), cfg.linkCartaceo, testi.cartaceo);
+  // Copertina rigida: il pulsante resta nascosto finché il link in config.js è vuoto
+  const rig = $("btn-rigida");
+  if (rig && cfg.linkRigida) { attiva(rig, cfg.linkRigida, testi.rigida); rig.hidden = false; }
   attiva($("btn-acquista-alto"), cfg.linkEbook || cfg.linkCartaceo, preordine && cfg.linkEbook ? testi.preAlto : testi.alto);
   // Pagina "Grazie": il pulsante della recensione compare solo se c'è il link in config.js
   const rec = $("btn-recensione");

@@ -43,25 +43,45 @@
   "translationOfWork": {
     "@id": "https://thomasfinco.github.io/#libro"
   },
-  "workExample": {
-    "@type": "Book",
-    "bookFormat": "https://schema.org/EBook",
-    "inLanguage": "en",
-    "datePublished": "2026-10-10",
-    "identifier": {
-      "@type": "PropertyValue",
-      "propertyID": "ASIN",
-      "value": "B0HM3XYZW8"
+  "workExample": [
+    {
+      "@type": "Book",
+      "bookFormat": "https://schema.org/EBook",
+      "inLanguage": "en",
+      "datePublished": "2026-10-10",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ASIN",
+        "value": "B0HM3XYZW8"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "USD",
+        "url": "https://www.amazon.com/dp/B0HM3XYZW8"
+      }
     },
-    "offers": {
-      "@type": "Offer",
-      "price": "3.99",
-      "priceCurrency": "USD",
-      "url": "https://www.amazon.com/dp/B0HM3XYZW8"
+    {
+      "@type": "Book",
+      "bookFormat": "https://schema.org/Paperback",
+      "inLanguage": "en",
+      "isbn": "9798163069934",
+      "numberOfPages": 358,
+      "url": "https://www.amazon.com/dp/B0HQCT3YYR"
+    },
+    {
+      "@type": "Book",
+      "bookFormat": "https://schema.org/Hardcover",
+      "inLanguage": "en",
+      "isbn": "9798163071579",
+      "numberOfPages": 358,
+      "url": "https://www.amazon.com/dp/B0HQDKXD9N"
     }
-  },
+  ],
   "sameAs": [
-    "https://www.amazon.com/dp/B0HM3XYZW8"
+    "https://www.amazon.com/dp/B0HM3XYZW8",
+    "https://www.amazon.com/dp/B0HQCT3YYR",
+    "https://www.amazon.com/dp/B0HQDKXD9N"
   ]
 }
 </script>
@@ -93,7 +113,8 @@
         <p class="gancio">A 41-microsecond offset. To everyone else, it's noise. To Elena Marchi, it's a signature.</p>
         <div class="azioni">
           <a class="btn" id="btn-ebook" aria-disabled="true">English ebook: coming soon</a>
-          <a class="btn secondario" id="btn-cartaceo" aria-disabled="true">English paperback: coming soon</a>
+          <a class="btn secondario" id="btn-cartaceo" aria-disabled="true">English paperback</a>
+          <a class="btn secondario" id="btn-rigida" hidden>Hardcover</a>
         </div>
         <p class="autore-riga">A novel by <strong>Thomas Finco</strong></p>
       </div>
