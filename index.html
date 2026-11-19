@@ -43,25 +43,45 @@
   "workTranslation": {
     "@id": "https://thomasfinco.github.io/en/#book"
   },
-  "workExample": {
-    "@type": "Book",
-    "bookFormat": "https://schema.org/EBook",
-    "inLanguage": "it",
-    "datePublished": "2026-10-10",
-    "identifier": {
-      "@type": "PropertyValue",
-      "propertyID": "ASIN",
-      "value": "B0HM3VLLCF"
+  "workExample": [
+    {
+      "@type": "Book",
+      "bookFormat": "https://schema.org/EBook",
+      "inLanguage": "it",
+      "datePublished": "2026-10-10",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ASIN",
+        "value": "B0HM3VLLCF"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "EUR",
+        "url": "https://www.amazon.it/dp/B0HM3VLLCF"
+      }
     },
-    "offers": {
-      "@type": "Offer",
-      "price": "3.99",
-      "priceCurrency": "EUR",
-      "url": "https://www.amazon.it/dp/B0HM3VLLCF"
+    {
+      "@type": "Book",
+      "bookFormat": "https://schema.org/Paperback",
+      "inLanguage": "it",
+      "isbn": "9798167982208",
+      "numberOfPages": 368,
+      "url": "https://www.amazon.it/dp/B0HS6G2751"
+    },
+    {
+      "@type": "Book",
+      "bookFormat": "https://schema.org/Hardcover",
+      "inLanguage": "it",
+      "isbn": "9798167984905",
+      "numberOfPages": 368,
+      "url": "https://www.amazon.it/dp/B0HS5NPGVF"
     }
-  },
+  ],
   "sameAs": [
-    "https://www.amazon.it/dp/B0HM3VLLCF"
+    "https://www.amazon.it/dp/B0HM3VLLCF",
+    "https://www.amazon.it/dp/B0HS6G2751",
+    "https://www.amazon.it/dp/B0HS5NPGVF"
   ]
 }
 </script>
@@ -93,7 +113,7 @@
         <p class="gancio">Uno scarto di 41 microsecondi. Per tutti è rumore. Per Elena Marchi è una firma.</p>
         <div class="azioni">
           <a class="btn" id="btn-ebook" aria-disabled="true">Ebook: in arrivo su Amazon</a>
-          <a class="btn secondario" id="btn-cartaceo" aria-disabled="true">Cartaceo: novembre 2026</a>
+          <a class="btn secondario" id="btn-cartaceo" aria-disabled="true">Cartaceo</a>
           <a class="btn secondario" id="btn-rigida" hidden>Copertina rigida</a>
         </div>
         <p class="autore-riga">Techno-thriller di <strong>Thomas Finco</strong></p>

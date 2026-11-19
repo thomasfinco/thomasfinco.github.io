@@ -11,8 +11,8 @@ const CONFIG = {
   it: {
     linkEbook: "https://www.amazon.it/dp/B0HM3VLLCF",   // ebook Kindle su Amazon.it
     uscitaEbook: "2026-10-10",   // data di uscita (AAAA-MM-GG): fino a quel giorno il pulsante dice "Preordina"
-    linkCartaceo: "",       // indirizzo Amazon.it del cartaceo (copertina flessibile), a novembre
-    linkRigida: "",         // indirizzo Amazon.it della copertina rigida, se pubblicata
+    linkCartaceo: "https://www.amazon.it/dp/B0HS6G2751",   // copertina flessibile su Amazon.it (ISBN 9798167982208)
+    linkRigida: "https://www.amazon.it/dp/B0HS5NPGVF",     // copertina rigida su Amazon.it (ISBN 9798167984905)
     linkRecensione: "https://www.amazon.it/review/create-review?asin=B0HM3VLLCF",   // pagina "Grazie": pulsante della recensione
     newsletterAction: "https://assets.mailerlite.com/jsonp/2685372/forms/200472986106463259/subscribe",   // modulo MailerLite "Newsletter IT"
     estratto: []            // paragrafi dell'estratto, uno per voce: vuoto = sezione nascosta
